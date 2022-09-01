@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: edgetype
+  namespace: testserver
+spec:
+  host: edgetype-testserver.apps.acm.xphyrlab.net
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: testserver
+    weight: 100
+  wildcardPolicy: None

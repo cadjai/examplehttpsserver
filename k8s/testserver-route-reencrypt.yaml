@@ -1,0 +1,24 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: reencrypt
+  namespace: testserver
+spec:
+  host: reencrypt-testserver.apps.acm.xphyrlab.net
+  port:
+    targetPort: 8443
+  tls:
+    destinationCACertificate: |
+      -----BEGIN CERTIFICATE-----
+      MIIFCTCCAvGgAwIBAgIUPMc4R60VcjfQkb4Dh3fHpgZK+BowDQYJKoZIhvcNAQEL
+...
+      yOjEgK3DoKAdNQq+pMyHZxci3rMNSYgPD1YDJnmW/jwueZ3YE/PVXw6ROxlB2ZN0
+      v5kWNzMVn+opQHhWo9jZJPQEubnbTUqbDy9YBLdrMwNIo2WusYWWWsz7f4kHM3aX
+      hlPf0VtjxPkKxGajOW2lq4PIE+mAnUa761Z/FY0EIQXi2OOCtv9AplW5bcAx
+      -----END CERTIFICATE-----
+    termination: reencrypt
+  to:
+    kind: Service
+    name: testserver
+    weight: 100
+  wildcardPolicy: None

@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata
+  name: testserver
+  namespace: testserver
+spec:
+  host: testserver-testserver.apps.acm.xphyrlab.net
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: testserver
+    weight: 100
+  wildcardPolicy: None

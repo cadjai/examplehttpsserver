@@ -1,0 +1,1 @@
+This repo is the source files for the example program used in the blog post [Explaining OpenShift Router Configurations](https://www.xphyr.net/openshift_router_configs/). This code is for explaining OpenShift routes, and should not be used for any production usage.

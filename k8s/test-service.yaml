@@ -1,0 +1,19 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: testserver
+  namespace: testserver
+spec:
+  ports:
+    - name: testserver-webport
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+    - name: testserver-secure
+      protocol: TCP
+      port: 8443
+      targetPort: 8443
+  internalTrafficPolicy: Cluster
+  type: ClusterIP
+  selector:
+    app: testserver
