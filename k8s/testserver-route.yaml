@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata
   name: testserver
-  namespace: testserver
+  namespace: ocproutes
 spec:
   host: testserver-testserver.apps.acm.xphyrlab.net
   port:

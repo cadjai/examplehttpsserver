@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: reencrypt
-  namespace: testserver
+  namespace: ocproutes
 spec:
   host: reencrypt-testserver.apps.acm.xphyrlab.net
   port:

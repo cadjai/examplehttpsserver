@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: passthrough
-  namespace: testserver
+  namespace: ocproutes
 spec:
   host: passthrough-testserver.apps.acm.xphyrlab.net
   port:

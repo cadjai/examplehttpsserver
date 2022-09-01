@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: testserver
-  namespace: testserver
+  namespace: ocproutes
 spec:
   ports:
     - name: testserver-webport
