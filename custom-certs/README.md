@@ -16,7 +16,7 @@ This step is not required if you already have your custom certificate assests.
 5. Verify that the appropriate certificates were generated into the custom-certs directory
 
 
-### Build and run the application
+### Build the application with S2i
 To build the updated container image containing the pki certificate and key using S2I use the following steps
 
 1. Login to the cluster
